@@ -14,7 +14,7 @@
 * **Step 3.** Open terminal and run command **make**.
 
 
-## Installing packages and dependencies
+## Example
 
 Before:
 
