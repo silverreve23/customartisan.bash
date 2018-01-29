@@ -6,3 +6,9 @@
     Custom artisan for create file patterns
 </p>
 
+
+## How to install
+
+* **Step 1.** Add downloaded or cloned project to your project root folder.
+* **Step 2.** Go to downloaded or cloned project folder.
+* **Step 3.** Open terminal and run command **make**.
