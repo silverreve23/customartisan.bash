@@ -29,10 +29,10 @@ use Illuminate\Database\Migrations\Migration;
 class CreateFlightsTable extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    * Run the migrations.
+    *
+    * @return void
+    */
     public function up()
     {
         Schema::create('flights', function (Blueprint $table) {
@@ -44,10 +44,10 @@ class CreateFlightsTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    * Reverse the migrations.
+    *
+    * @return void
+    */
     public function down()
     {
         Schema::drop('flights');
@@ -72,49 +72,49 @@ use Illuminate\Database\Migrations\Migration;
 #-------------------------------------------------------------------------------
 class CreateFlightsTable extends Migration{
 
-	public $tableName = 'flights';
+    public $tableName = 'flights';
 
-	#---------------------------------------------------------------------------
-	# @method create
-	# @access private
-	# @params (object) Blueprint
-	# @return callback
-	# Metod before create table structure
-	#---------------------------------------------------------------------------
-	private function create(){
-		return function(Blueprint $table){
-			$table->increments('id');
+    #---------------------------------------------------------------------------
+    # @method create
+    # @access private
+    # @params (object) Blueprint
+    # @return callback
+    # Metod before create table structure
+    #---------------------------------------------------------------------------
+    private function create(){
+        return function(Blueprint $table){
+            $table->increments('id');
             $table->string('name');
             $table->string('airline');
             $table->timestamps();
-		};
+        };
     }
 
-	#---------------------------------------------------------------------------
-	# @method up
-	# @access public
-	# @params void
-	# @return void
-	# Metod create table
-	#---------------------------------------------------------------------------
+    #---------------------------------------------------------------------------
+    # @method up
+    # @access public
+    # @params void
+    # @return void
+    # Metod create table
+    #---------------------------------------------------------------------------
     public function up(){
         Schema::create(
-			$this->tableName,
-			$this->create()
-		);
+            $this->tableName,
+            $this->create()
+        );
     }
 
-	#---------------------------------------------------------------------------
-	# @method down
-	# @access public
-	# @params void
-	# @return void
-	# Metod drop table
-	#---------------------------------------------------------------------------
+    #---------------------------------------------------------------------------
+    # @method down
+    # @access public
+    # @params void
+    # @return void
+    # Metod drop table
+    #---------------------------------------------------------------------------
     public function down(){
         Schema::dropIfExists(
-			$this->tableName
-		);
+            $this->tableName
+        );
     }
 
 }
