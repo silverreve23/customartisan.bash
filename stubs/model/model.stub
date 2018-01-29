@@ -1,0 +1,32 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+#-------------------------------------------------------------------------------
+# @class DummyClass
+# @package DummyNamespace
+# Model handle data ...
+#-------------------------------------------------------------------------------
+class DummyClass extends Model{
+    
+    public $table = '';
+    public $primaryKey = '';
+    protected $fillable = array();
+    protected $guarded = array();
+    
+    #---------------------------------------------------------------------------
+	# @method get
+	# @access protected
+	# @params void
+	# @return object
+	# Metod get data ...
+	#---------------------------------------------------------------------------
+	protected function get(){
+
+		return $this;
+
+	}
+    
+}

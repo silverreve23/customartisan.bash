@@ -1,0 +1,31 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Http\Request;
+use DummyRootNamespaceHttp\Controllers\MainController;
+
+#-------------------------------------------------------------------------------
+# @class DummyClass
+# @package DummyNamespace
+# Class handle ...
+#-------------------------------------------------------------------------------
+class DummyClass extends MainController{
+	
+    public function __construct(){
+		parent::__construct();
+	}
+
+	#---------------------------------------------------------------------------
+	# @method index
+	# @params void
+	# @return view template
+	# Method handle ...
+	#---------------------------------------------------------------------------
+	public function index(){
+
+		return view('index');
+
+	}
+	
+}
